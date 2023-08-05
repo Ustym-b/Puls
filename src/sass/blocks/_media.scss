@@ -1,0 +1,140 @@
+@media (max-width: 991px){
+    .container{
+        padding: 0 20px;
+    }
+    .promo{
+        &__header{
+            font-size: 35px;
+        }
+        &__subheader{
+            font-size: 20px;
+        }
+    }
+
+    .adventages{
+        &__item{
+            max-width: 220px;
+        }
+    }
+
+    .title_left{
+        font-size: 30px;
+        max-width: 720px;
+    }
+}
+
+@media (max-width: 767px){
+    .button-main{
+        margin-top: 50px;
+    }
+    .header{
+        &__official{
+            display: none;
+        }
+    }
+    .promo{
+        min-height: 580px;
+        padding: 21px 0;
+        &__header{
+            font-size: 32px;
+        }
+        &__subheader{
+            font-size: 18px;
+        }
+        &__icons{
+            max-width: 400px;
+            margin-top: 50px;
+        }
+    }
+
+    .adventages{
+        &__wrapper{
+            flex-direction: column;
+        }
+        &__item{
+            max-width: 100%;
+            margin-top: 20px;
+        }
+        &__subtitle{
+            margin-top: 20px;
+        }
+        &__descr{
+            max-width: 400px;
+            margin-top: 15px;
+        }
+    }
+
+    .title_left{
+        font-size: 24px;
+        max-width: 720px;
+        text-align: center;
+    }
+
+    .feed-form{
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+    .consultation{
+        min-height: 640px;
+        &__descr{
+            margin-top: 40px;
+            font-size: 18px;
+            text-align: center;
+        }
+    }        
+}
+
+@media (max-width: 575px){
+    .button{
+        width: 135px;
+        font-size: 11px;
+        &_main{
+            width: 250px;
+            font-size: 15px;
+        }
+        &_form{
+            width: 100%;
+            font-size: 16px;
+        }
+    }
+    .promo{
+        &__wrapper{
+            align-items: center;
+        }
+        &__header{
+            font-size: 24px;
+            text-align: center;
+        }
+        &__subheader{
+            font-size: 14px;
+            text-align: center;
+        }
+        &__icons{
+            max-width: 350px;
+            width: 100%;
+            margin-top: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+        }
+        &__icon{
+            margin-bottom: 15px;
+        }
+    }
+    .header{
+        &__logo{
+            max-width: 180px;
+        }
+        &__phone{
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+    }
+    .title_left{
+        font-size: 20px;
+    }
+    .feed-form{
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+}
