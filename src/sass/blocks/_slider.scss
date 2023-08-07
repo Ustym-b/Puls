@@ -1,0 +1,20 @@
+.slider{
+    padding: 82px 0;
+    &__offer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__prev, &__next{
+        width: 31px;
+        height: 50px;
+    }
+    &__wrapper{
+        max-width: 750px;
+        position: relative;
+    }
+    &__offer-iner{
+        display: flex;
+        transition: 0.5s all;
+    }
+}

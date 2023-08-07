@@ -21,6 +21,15 @@
         font-size: 30px;
         max-width: 720px;
     }
+
+    .slider{
+        &__offer{
+            justify-content: center;
+        }
+        &__prev, &__next{
+            display: none;
+        }
+    }
 }
 
 @media (max-width: 767px){
