@@ -23,7 +23,7 @@
                 <div class="header__contact">
                     <a href="tel:+74999228974" class="header__phone">+7 (499) 922-89-74
                     </a>
-                    <button class="button">Замовити дзвінок</button>
+                    <button data-modal="consultation" class="button">Замовити дзвінок</button>
                 </div>
             </header>
 
@@ -49,7 +49,7 @@
                     </div>
                 </div>
 
-                <button class="button button_main"> замовити консультацію</button>
+                <button data-modal="consultation" class="button button_main"> замовити консультацію</button>
                 <div class="promo__link">
                     або
                     <a href="#">Перейти в каталог</a>
@@ -94,11 +94,11 @@
                 Просто заповніть форму заявки <br>
                 і ми передзвонимо вам протягом 10 хвилин
             </div>
-            <form class="feed-form" action="#">
+            <form class="feed-form _submit-active" action="#">
                 <input required name="name" placeholder="Ваше ім'я" type="text">
-                <input required name="phone" placeholder="Ваш телефон" type="number">
+                <input required class="phone" name="phone" placeholder="Ваш телефон" >
                 <input required name="email" placeholder="Ваш E-mail" type="email">
-                <button class="button button_submit">Замовити консультацію</button>
+                <button class="button button_submit ">Замовити консультацію</button>
             </form>
         </div>
     </section>
@@ -107,7 +107,7 @@
         <div class="container">
             <div class="slider__offer">
                 <div class="slider__prev">
-                    <img src="icons/left.svg" alt="left">
+                    <span class="icon-left"></span>
                 </div>
                 <div class="slider__wrapper">
                     <div class="slider__offer-iner">
@@ -124,7 +124,7 @@
                     </div>
                 </div>
                 <div class="slider__next">
-                    <img src="icons/right.svg" alt="right">
+                    <span class="icon-right"></span>
                 </div>
             </div>
         </div>
@@ -453,6 +453,124 @@
         </div>
     </section>
 
+    <section class="reviews">
+        <div class="container">
+            <div class="title">Відгуки клієнтів</div>
+            <div class="reviews__users">
+                <div class="reviews__user">
+                    <img src="img/feed_1.png" alt="user1" class="reviews__img"></img>
+                    <div class="reviews__text">
+                        <div class="reviews__subtitle">
+                            Ірина Іванченко
+                        </div>
+                        <div class="reviews__count">
+                            2 напівмарафони
+                        </div>
+                        <div class="reviews__descr">
+                            Не знала, що собі купити – звернулася до хлопців із RunSmart – підібрали пульсометр, який підійшов саме під мої цілі та фінансові можливості.
+                            Через деякий час вирішила оновити гаджет – не роздумуючи звернулася туди ж.
+                            <br><br>
+                            Нові цілі – новий гаджет!
+                            <br><br>
+                            Дякую, RunSmart!
+                        </div>
+                    </div>
+                </div>
+                <div class="reviews__line-decoration"></div>
+                <div class="reviews__user">
+                    <img src="img/feed_2.png" alt="user2" class="reviews__img"></img>
+                    <div class="reviews__text">
+                        <div class="reviews__subtitle">
+                            Іван Хмельницький
+                        </div>
+                        <div class="reviews__count">
+                            1 напівмарафон
+                        </div>
+                        <div class="reviews__descr">
+                            Крута штука-пульсометр. Зазвичай без них бігав. Виявляється, тільки гірше собі робив.
+                            Купив пульсометр, ще подарунок отримав тренування. Зі мною разом провели перше тренування, навчили користуватися новим гаджетом. Також пояснили основи анатомії, склали план тренувань на місяць уперед.
+                            <br><br>
+                            З ними підготувався до свого першого півмарафону! Дякую!!!
+                        </div>
+                    </div>
+                </div>
+                <div class="reviews__line-decoration"></div>
+                <div class="reviews__user">
+                    <img src="img/feed_3.png" alt="user3" class="reviews__img"></img>
+                    <div class="reviews__text">
+                        <div class="reviews__subtitle">
+                            Юлія Пирняк
+                        </div>
+                        <div class="reviews__count">
+                            2 напівмарафони
+                        </div>
+                        <div class="reviews__descr">
+                            Довго було почати бігати, т.к. раніше кілька разів починала, але ставало важко і я кидала. Від друзів почула про RunSmart і про біг із контролем пульсу і вирішила спробувати.
+                            <br><br>
+                            Подзвонила, хлопці поцікавилися моїми цілями та підібрали дуже цікавий варіант зі знижкою! Тепер бігаю і насолоджуюся бігом! Пробігла вже 2 півмарафони і кілька коротших забігів і не має наміру зупинятися!
+                            <br><br>
+                            Дякую!!!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2605.8688285424278!2d28.45797505263977!3d49.222014687928855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472d5b830c091c53%3A0x374dcb6033aab2ba!2z0LLRg9C70LjRhtGPINCa0L3Rj9C30ZbQsiDQmtC-0YDRltCw0YLQvtCy0LjRh9GW0LIsIDE1NSwg0JLRltC90L3QuNGG0Y8sINCS0ZbQvdC90LjRhtGM0LrQsCDQvtCx0LvQsNGB0YLRjCwgMjEwMDA!5e0!3m2!1suk!2sua!4v1691593153235!5m2!1suk!2sua" width="100%" height="630" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="footer__info">
+            <address class="footer__addr">Вінниця, Князів Коріантовичів, 155</address>
+            <a href="tel:0699228974" class="footer__phone">(069) 922-89-74</a>
+            <div class="footer__social">
+                <a href="#" class="footer__social-item">
+                    <span class="icon-facebook2"></span>
+                </a>
+                <a href="#" class="footer__social-item">
+                    <span class="icon-instagram1"></span>
+                </a>
+                <a href="#" class="footer__social-item">
+                    <span class="icon-pinterest"></span>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="overlay">
+        <div class="modal" id="consultation">
+            <div class="modal__close">&times;</div>
+            <div class="modal__subtitle">Просто заповніть форму заявки</div>
+            <div class="modal__descr">і ми передзвонимо вам протягом 10 хвилин</div>
+            <form class="feed-form feed-form_mt25" action="#">
+                <input required name="name" placeholder="Ваше ім'я" type="text">
+                <input required class="phone" name="phone" placeholder="Ваш телефон">
+                <input required name="email" placeholder="Ваш E-mail" type="email">
+
+                <button class="button button_submit">Замовити консультацію</button>
+            </form>
+        </div>
+
+        <div class="modal" id="order">
+            <div class="modal__close">&times;</div>
+            <div class="modal__subtitle">Ваше замовлення:</div>
+            <div class="modal__descr"></div>
+            <form class="feed-form feed-form_mt25" action="#">
+                <input required name="name" placeholder="Ваше ім'я" type="text">
+                <input required class="phone" name="phone" placeholder="Ваш телефон">
+                <input required name="email" placeholder="Ваш E-mail" type="email">
+
+                <button class="button button_submit">Купити</button>
+            </form>
+        </div>
+
+        <div class="modal modal_mini" id="thancs">
+            <div class="modal__close">&times;</div>
+            <div class="modal__subtitle">Дякуємо за вашу заявку!</div>
+            <div class="modal__descr"> Наш менеджер зв'яжеться з вами найближчим часом!</div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/imask"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

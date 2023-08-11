@@ -1,0 +1,43 @@
+.reviews{
+    padding-bottom: 71px;
+    &__users{
+        margin-top: 70px;
+    }
+    &__user{
+        display: flex;
+        margin-top: 50px;
+
+    }
+    &__img{
+        width: 169px;
+        max-height: 169px;
+        margin-right: 62px;
+    }
+    &__text{
+        max-width: 650px;
+    }
+    &__subtitle{
+        color: $text-color;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: normal;
+    }
+    &__count{
+        color: #646464;
+        margin-top: 5px;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: normal;
+    }
+    &__descr{
+        color: $text-color;
+        font-size: 16px;
+        font-weight: 300;
+        margin-top: 10px;
+    }
+    &__line-decoration{
+        width: 100%;
+        margin-top: 50px;
+        border-bottom: 1px solid #f6f6f6;
+    }
+}

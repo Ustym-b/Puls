@@ -103,6 +103,32 @@
             justify-content: center;
         }
     }
+    iframe{
+        height: 500px;
+    }
+    .footer{
+        min-height: 500px;
+        &__info{
+            width: 420px;
+            height: 220px;
+            padding: 50px 60px 60px 60px;
+        }
+        &__addr{
+            margin-bottom: 25px;
+            font-size: 18px;
+        }
+        &__phone{
+            margin-bottom: 25px;
+            font-size: 18px;
+        }
+        &__social-item{
+            width: 40px;
+            height: 40px;
+            span{
+                font-size: 20px;
+            }
+        }
+    }
 }
 
 @media (max-width: 575px){
@@ -111,12 +137,20 @@
         font-size: 11px;
         &_main{
             width: 250px;
-            font-size: 15px;
+            font-size: 14px;
         }
-        &_form{
+        &_submit{
             width: 100%;
-            font-size: 16px;
+            font-size: 14px;
         }
+        &_mini{
+            width: 110px;
+            height: 30px;
+            font-size: 12px;
+        }
+    }
+    .title{
+        font-size: 24px;
     }
     .promo{
         &__wrapper{
@@ -161,5 +195,98 @@
     .feed-form{
         margin: 0 auto;
         margin-top: 20px;
+        input{
+            height: 40px;
+            padding: 0 15px;
+            font-size: 12px;
+        }
+    }
+    .catalog{
+        &__tab{
+            font-size: 12px;
+            line-height: normal;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        &-item{
+            &__old-price{
+                font-size: 12px;
+            }
+            &__price{
+                font-size: 14px;
+
+            }
+        }
+    }
+    .reviews{
+        &__users{
+            margin-top: 50px;
+        }
+        &__user{
+            display: block;
+            margin-top: 30px;
+        }
+        &__img{
+            display: block;
+            margin: 0 auto;
+            width: 169px;
+            max-height: 169px;
+        }
+        &__text{
+            margin-top: 20px;
+            padding: 0 20px;
+        }
+        &__subtitle{
+            text-align: center;
+        }
+        &__count{
+            text-align: center;
+        }
+    } 
+    iframe{
+        height: 400px;
+    }   
+    .footer{
+        min-height: 400px;
+        &__info{
+            width: 280px;
+            height: 160px;
+            padding: 20px 10px;
+        }
+        &__addr{
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+        &__phone{
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+    }
+    .modal{
+        padding: 30px 15px;
+        max-width: 280px;
+        min-height: 350px;
+        &__close{
+            top: 10px;
+            right: 2px;
+            font-size: 24px;
+            line-height: 16px;
+        }
+        &__subtitle{
+            color: $text-color;
+            font-size: 16px;
+            font-weight: 700;
+            text-align: center;
+            line-height: normal;
+        }
+        &__descr{
+            color: $text-color;
+            font-size: 12px;
+            font-weight: 500;
+            text-align: center;
+            line-height: normal;
+            margin-top: 5px;
+        }
     }
 }

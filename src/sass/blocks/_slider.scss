@@ -8,6 +8,8 @@
     &__prev, &__next{
         width: 31px;
         height: 50px;
+        cursor: pointer;
+        font-size: 50px;
     }
     &__wrapper{
         width: 750px;
@@ -17,4 +19,6 @@
         display: flex;
         transition: 0.5s all;
     }
+
 }
+
