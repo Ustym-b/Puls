@@ -97,11 +97,14 @@
     .catalog{
         &__tab{
             font-size: 15px;
-            line-height: normal;
+            
             display: flex;
             align-items: center;
             justify-content: center;
-        }
+            div {
+                width: 100%;
+            }
+        }        
     }
     iframe{
         height: 500px;
@@ -204,7 +207,6 @@
     .catalog{
         &__tab{
             font-size: 12px;
-            line-height: normal;
             display: flex;
             align-items: center;
             justify-content: center;

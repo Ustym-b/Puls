@@ -18,6 +18,11 @@
         height: 55px;
         width: 100%;
         font-size: 16px;
+        // pointer-events: none;
+        // &-active{
+        //     pointer-events: auto;
+        //     background-color: #750202;
+        // }
     }
     &_mini{
         width: 131px;
