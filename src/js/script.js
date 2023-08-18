@@ -166,7 +166,10 @@ const consultBtn = document.querySelectorAll('[data-modal="consultation"]'),
 	consultModal = document.querySelector('#consultation'),
 	orderBtn = document.querySelectorAll('.button_mini'),
 	orderModal = document.querySelector('#order'),
-	modalClose = modalWrapper.querySelectorAll('.modal__close');
+	modalClose = modalWrapper.querySelectorAll('.modal__close'),
+	thancsModal = document.querySelector('#thancs'),
+	errorModal = document.querySelector('#error'),
+	modals = document.querySelectorAll('.modal');
 
 const submitBtn = document.querySelectorAll('.button_submit'),
 	formInput = document.querySelectorAll('.feed-form input');
@@ -177,9 +180,9 @@ const showModalWindow = (wrapper, modal) =>{
 	document.body.style.overflow = 'hidden';
 };
 
-const closeModalWindow = (wrapper, modal)=>{
-	wrapper.style.display = 'none';
-	modal.style.display = 'none';
+const closeModalWindow = ()=>{
+	modalWrapper.style.display = 'none';
+	modals.forEach(item => item.style.display = 'none');
 	document.body.style.overflow = '';
 	formInput.forEach(item => {
 		item.value = '';
@@ -187,6 +190,13 @@ const closeModalWindow = (wrapper, modal)=>{
 	});
 };
 
+const showThanksModal= (modal) => {
+	closeModalWindow();
+	showModalWindow(modalWrapper, modal);
+	setTimeout(() => {
+		closeModalWindow();
+	}, 4000);
+};
 consultBtn.forEach(item => item.addEventListener('click', () => showModalWindow(modalWrapper, consultModal)));
 
 orderBtn.forEach((item, i) => item.addEventListener('click', () => {
@@ -194,23 +204,58 @@ orderBtn.forEach((item, i) => item.addEventListener('click', () => {
 	showModalWindow(modalWrapper, orderModal);
 }));
 
-modalClose.forEach(item => {
-	item.addEventListener('click', (e)=> e.target.parentElement.id == 'order' ? closeModalWindow(modalWrapper, orderModal) : closeModalWindow(modalWrapper, consultModal));
-});
+modalClose.forEach(item => item.addEventListener('click', ()=> closeModalWindow()));
+
+
+// forms
+
+const forms = document.querySelectorAll('form');
+
+forms.forEach(form => bindPostData(form));
+
+const postData = async (url, data) => {
+	let response = await fetch(url, {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json'
+		},
+		body: data
+	});
+
+	return await response.json();
+};
+
+function bindPostData(form){
+	form.addEventListener('submit', (e)=>{
+		e.preventDefault();
+
+		const formData = new FormData(form);
+
+		const json = JSON.stringify(Object.fromEntries(formData.entries()));
+
+		postData('http://localhost:3000/requests', json)
+			.then(data => {
+				console.log(data);
+				showThanksModal(thancsModal);
+			}).catch(()=>{
+				showThanksModal(errorModal);
+			}).finally(()=>{
+				form.reset();
+			});
+	});
+}
 
 //forms validate
 const phoneInput = document.querySelectorAll('.phone');
 const masks = [];
 
-phoneInput.forEach(item => {
+phoneInput.forEach((item) => {
 	let mask = new IMask(item, {
 		mask: '{}(067)-000-00-00'
 	});
 	masks.push(mask);
-	console.log(masks);
 });
 
-console.log(masks[1].masked.isComplete);
 
 // phoneInput.forEach((item, i) => item.addEventListener('input', () => phoneInputHendler(i)));
 
@@ -220,7 +265,7 @@ console.log(masks[1].masked.isComplete);
 
 const getSiblings = (e) => {
 	// for collecting siblings
-	console.log(e);
+	// console.log(e);
 	let siblings = []; 
 	// if no parent, return no sibling
 	if(!e.parentNode) {
@@ -240,16 +285,24 @@ const getSiblings = (e) => {
 
 submitBtn.forEach(item => item.addEventListener('click', (e)=>{
 	let siblings = getSiblings(e.target);
+
 	siblings.forEach(item => {
-		if(item.value == '' || siblings[1].length < 9){
+		if(item.value == ''){
 			item.style.border = '1px solid red';
 		} else{
 			item.style.border = 'none';
-		} 
-		
+		}	
 	});
-	// if(siblings[1].length < 9){
-        
-	// }
-	// formInput.forEach(item => item.value == '' ? item.style.border = '1px solid red' : item.style.border = 'none');
 }));
+
+// Scrolll and pageup
+
+window.addEventListener('scroll', ()=>{
+	if(window.scrollY > 1600){
+		document.querySelector('.pageup').style.display = 'block';
+	} else {
+		document.querySelector('.pageup').style.display = 'none';
+	}
+});
+
+new WOW().init();

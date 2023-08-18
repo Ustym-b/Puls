@@ -21,6 +21,7 @@
     "gulp-cli": "^2.3.0",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^5.1.0",
+    "json-server": "^0.17.3",
     "sass": "^1.64.1"
   },
   "browserList": [
@@ -30,6 +31,7 @@
     "not dead"
   ],
   "dependencies": {
+    "animate.css": "^4.1.1",
     "imask": "^7.1.3"
   }
 }

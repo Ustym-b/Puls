@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +7,11 @@
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/reboot.css">
     <link rel="stylesheet" href="css/icons.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"> -->
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-    <section class="promo">
+    <section id="up" class="promo">
         <div class="container">
             <header class="header">
                 <a href="#" class="header__logo">
@@ -69,7 +70,7 @@
                         адже самі бігають напівмарафони, перепливали Босфор та готуються до змагань з триатлону!</div>
                 </div>
                 <div class="adventages__item">
-                    <img src="icons/advantages/heart.png" alt="heart" class="adventages_icon">
+                    <img src="icons/advantages/heart.png" alt="heart" class="adventages_icon adventages_icon_animation">
                     <div class="adventages__subtitle">Дбаємо про здоров'я</div>
                     <div class="adventages__descr">Ми працюємо для того,
                         щоб Ваші заняття спортом йшли на користь Вашому здоров'ю та були на радість Вам та Вашим близьким!</div>
@@ -94,7 +95,7 @@
                 Просто заповніть форму заявки <br>
                 і ми передзвонимо вам протягом 10 хвилин
             </div>
-            <form class="feed-form _submit-active" action="#">
+            <form class="feed-form " action="#">
                 <input required name="name" placeholder="Ваше ім'я" type="text">
                 <input required class="phone" name="phone" placeholder="Ваш телефон" >
                 <input required name="email" placeholder="Ваш E-mail" type="email">
@@ -103,7 +104,7 @@
         </div>
     </section>
 
-    <section class="slider">
+    <div class="slider">
         <div class="container">
             <div class="slider__offer">
                 <div class="slider__prev">
@@ -128,11 +129,11 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
     <section class="catalog">
         <div class="container">
-            <div class="title">Каталог пульсометрів</div>
+            <h2 class="title">Каталог пульсометрів</h2>
             <div class="catalog__tabs">
                 <div class="catalog__tab catalog__tab_active"><div>Для фітнесу</div></div>
                 <div class="catalog__tab"><div>для бігу</div></div>
@@ -151,14 +152,16 @@
                             </div>
                             <a href="#" class="catalog-item__link">Детальніше</a>
                         </div>
-                        <ul class="catalog-item__list">
-                            <li>Ви почуєте звукове сповіщення про потрібний пульс під час тренування;</li>
-                            <li>Ви побачите інформативний графічний індикатор цільових тренувальних зон пульсу;</li>
-                            <li>Також Ви побачите інформацію про витрати калорій за тренування;</li>
-                            <li>Ви зможете переглянути дані з 10 тренувань.</li>
-
+                        <div class="catalog-item__list">
+                            <ul>
+                                <li>Ви почуєте звукове сповіщення про потрібний пульс під час тренування;</li>
+                                <li>Ви побачите інформативний графічний індикатор цільових тренувальних зон пульсу;</li>
+                                <li>Також Ви побачите інформацію про витрати калорій за тренування;</li>
+                                <li>Ви зможете переглянути дані з 10 тренувань.</li>
+                            </ul>
+        
                             <a href="#" class="catalog-item__back">назад</a>
-                        </ul>
+                        </div>
                     </div>
                     <hr>
                     <div class="catalog-item__footer">
@@ -185,14 +188,16 @@
                             </div>
                             <a href="#" class="catalog-item__link">Детальніше</a>
                         </div>
-                        <ul class="catalog-item__list">
-                            <li>Ви почуєте звукове сповіщення про потрібний пульс під час тренування;</li>
-                            <li>Ви побачите інформативний графічний індикатор цільових тренувальних зон пульсу;</li>
-                            <li>Також Ви побачите інформацію про витрати калорій за тренування;</li>
-                            <li>Ви зможете переглянути дані з 10 тренувань.</li>
-
+                        <div class="catalog-item__list">
+                            <ul>
+                                <li>Ви почуєте звукове сповіщення про потрібний пульс під час тренування;</li>
+                                <li>Ви побачите інформативний графічний індикатор цільових тренувальних зон пульсу;</li>
+                                <li>Також Ви побачите інформацію про витрати калорій за тренування;</li>
+                                <li>Ви зможете переглянути дані з 10 тренувань.</li>
+                            </ul>
+        
                             <a href="#" class="catalog-item__back">назад</a>
-                        </ul>
+                        </div>
                     </div>
                     <hr>
                     <div class="catalog-item__footer">
@@ -219,14 +224,16 @@
                             </div>
                             <a href="#" class="catalog-item__link">Детальніше</a>
                         </div>
-                        <ul class="catalog-item__list">
-                            <li>Ви почуєте звукове сповіщення про потрібний пульс під час тренування;</li>
-                            <li>Ви побачите інформативний графічний індикатор цільових тренувальних зон пульсу;</li>
-                            <li>Також Ви побачите інформацію про витрати калорій за тренування;</li>
-                            <li>Ви зможете переглянути дані з 10 тренувань.</li>
-
+                        <div class="catalog-item__list">
+                            <ul>
+                                <li>Ви почуєте звукове сповіщення про потрібний пульс під час тренування;</li>
+                                <li>Ви побачите інформативний графічний індикатор цільових тренувальних зон пульсу;</li>
+                                <li>Також Ви побачите інформацію про витрати калорій за тренування;</li>
+                                <li>Ви зможете переглянути дані з 10 тренувань.</li>
+                            </ul>
+        
                             <a href="#" class="catalog-item__back">назад</a>
-                        </ul>
+                        </div>
                     </div>
                     <hr>
                     <div class="catalog-item__footer">
@@ -253,14 +260,16 @@
                             </div>
                             <a href="#" class="catalog-item__link">Детальніше</a>
                         </div>
-                        <ul class="catalog-item__list">
-                            <li>Ви почуєте звукове сповіщення про потрібний пульс під час тренування;</li>
-                            <li>Ви побачите інформативний графічний індикатор цільових тренувальних зон пульсу;</li>
-                            <li>Також Ви побачите інформацію про витрати калорій за тренування;</li>
-                            <li>Ви зможете переглянути дані з 10 тренувань.</li>
-
+                        <div class="catalog-item__list">
+                            <ul>
+                                <li>Ви почуєте звукове сповіщення про потрібний пульс під час тренування;</li>
+                                <li>Ви побачите інформативний графічний індикатор цільових тренувальних зон пульсу;</li>
+                                <li>Також Ви побачите інформацію про витрати калорій за тренування;</li>
+                                <li>Ви зможете переглянути дані з 10 тренувань.</li>
+                            </ul>
+        
                             <a href="#" class="catalog-item__back">назад</a>
-                        </ul>
+                        </div>
                     </div>
                     <hr>
                     <div class="catalog-item__footer">
@@ -287,14 +296,16 @@
                             </div>
                             <a href="#" class="catalog-item__link">Детальніше</a>
                         </div>
-                        <ul class="catalog-item__list">
-                            <li>Ви почуєте звукове сповіщення про потрібний пульс під час тренування;</li>
-                            <li>Ви побачите інформативний графічний індикатор цільових тренувальних зон пульсу;</li>
-                            <li>Також Ви побачите інформацію про витрати калорій за тренування;</li>
-                            <li>Ви зможете переглянути дані з 10 тренувань.</li>
-
+                        <div class="catalog-item__list">
+                            <ul>
+                                <li>Ви почуєте звукове сповіщення про потрібний пульс під час тренування;</li>
+                                <li>Ви побачите інформативний графічний індикатор цільових тренувальних зон пульсу;</li>
+                                <li>Також Ви побачите інформацію про витрати калорій за тренування;</li>
+                                <li>Ви зможете переглянути дані з 10 тренувань.</li>
+                            </ul>
+        
                             <a href="#" class="catalog-item__back">назад</a>
-                        </ul>
+                        </div>
                     </div>
                     <hr>
                     <div class="catalog-item__footer">
@@ -321,84 +332,16 @@
                             </div>
                             <a href="#" class="catalog-item__link">Детальніше</a>
                         </div>
-                        <ul class="catalog-item__list">
-                            <li>Ви почуєте звукове сповіщення про потрібний пульс під час тренування;</li>
-                            <li>Ви побачите інформативний графічний індикатор цільових тренувальних зон пульсу;</li>
-                            <li>Також Ви побачите інформацію про витрати калорій за тренування;</li>
-                            <li>Ви зможете переглянути дані з 10 тренувань.</li>
-
+                        <div class="catalog-item__list">
+                            <ul>
+                                <li>Ви почуєте звукове сповіщення про потрібний пульс під час тренування;</li>
+                                <li>Ви побачите інформативний графічний індикатор цільових тренувальних зон пульсу;</li>
+                                <li>Також Ви побачите інформацію про витрати калорій за тренування;</li>
+                                <li>Ви зможете переглянути дані з 10 тренувань.</li>
+                            </ul>
+        
                             <a href="#" class="catalog-item__back">назад</a>
-                        </ul>
-                    </div>
-                    <hr>
-                    <div class="catalog-item__footer">
-                        <div class="catalog-item__prices">
-                            <div class="catalog-item__old-price">
-                                4 750 грн.
-                            </div>
-                            <div class="catalog-item__price">
-                                4 400 грн.
-                            </div>
                         </div>
-                        <button class="button button_mini">Купити</button>
-                    </div>
-                </div>
-            </div>
-            <div class="catalog__content">
-                <div class="catalog-item">
-                    <div class="catalog-item__wrapper">
-                        <div class="catalog-item__content catalog-item__content_active">
-                            <img src="img/pulsometr.png" alt="pulsometr" class="catalog-item__img">
-                            <div class="catalog-item__subtitle">
-                                Пульсометр Polar FT1
-                            </div>
-                            <div class="catalog-item__descr">
-                                Для перших кроків у тренуваннях, заснованих на серцевому ритмі
-                            </div>
-                            <a href="#" class="catalog-item__link">Детальніше</a>
-                        </div>
-                        <ul class="catalog-item__list">
-                            <li>Ви почуєте звукове сповіщення про потрібний пульс під час тренування;</li>
-                            <li>Ви побачите інформативний графічний індикатор цільових тренувальних зон пульсу;</li>
-                            <li>Також Ви побачите інформацію про витрати калорій за тренування;</li>
-                            <li>Ви зможете переглянути дані з 10 тренувань.</li>
-
-                            <a href="#" class="catalog-item__back">назад</a>
-                        </ul>
-                    </div>
-                    <hr>
-                    <div class="catalog-item__footer">
-                        <div class="catalog-item__prices">
-                            <div class="catalog-item__old-price">
-                                4 750 грн.
-                            </div>
-                            <div class="catalog-item__price">
-                                4 400 грн.
-                            </div>
-                        </div>
-                        <button class="button button_mini">Купити</button>
-                    </div>
-                </div>
-                <div class="catalog-item">
-                    <div class="catalog-item__wrapper">
-                        <div class="catalog-item__content catalog-item__content_active">
-                            <img src="img/pulsometr.png" alt="pulsometr" class="catalog-item__img">
-                            <div class="catalog-item__subtitle">
-                                Пульсометр Polar FT1
-                            </div>
-                            <div class="catalog-item__descr">
-                                Для перших кроків у тренуваннях, заснованих на серцевому ритмі
-                            </div>
-                            <a href="#" class="catalog-item__link">Детальніше</a>
-                        </div>
-                        <ul class="catalog-item__list">
-                            <li>Ви почуєте звукове сповіщення про потрібний пульс під час тренування;</li>
-                            <li>Ви побачите інформативний графічний індикатор цільових тренувальних зон пульсу;</li>
-                            <li>Також Ви побачите інформацію про витрати калорій за тренування;</li>
-                            <li>Ви зможете переглянути дані з 10 тренувань.</li>
-
-                            <a href="#" class="catalog-item__back">назад</a>
-                        </ul>
                     </div>
                     <hr>
                     <div class="catalog-item__footer">
@@ -427,14 +370,90 @@
                             </div>
                             <a href="#" class="catalog-item__link">Детальніше</a>
                         </div>
-                        <ul class="catalog-item__list">
-                            <li>Ви почуєте звукове сповіщення про потрібний пульс під час тренування;</li>
-                            <li>Ви побачите інформативний графічний індикатор цільових тренувальних зон пульсу;</li>
-                            <li>Також Ви побачите інформацію про витрати калорій за тренування;</li>
-                            <li>Ви зможете переглянути дані з 10 тренувань.</li>
-
+                        <div class="catalog-item__list">
+                            <ul>
+                                <li>Ви почуєте звукове сповіщення про потрібний пульс під час тренування;</li>
+                                <li>Ви побачите інформативний графічний індикатор цільових тренувальних зон пульсу;</li>
+                                <li>Також Ви побачите інформацію про витрати калорій за тренування;</li>
+                                <li>Ви зможете переглянути дані з 10 тренувань.</li>
+                            </ul>
+        
                             <a href="#" class="catalog-item__back">назад</a>
-                        </ul>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="catalog-item__footer">
+                        <div class="catalog-item__prices">
+                            <div class="catalog-item__old-price">
+                                4 750 грн.
+                            </div>
+                            <div class="catalog-item__price">
+                                4 400 грн.
+                            </div>
+                        </div>
+                        <button class="button button_mini">Купити</button>
+                    </div>
+                </div>
+                <div class="catalog-item">
+                    <div class="catalog-item__wrapper">
+                        <div class="catalog-item__content catalog-item__content_active">
+                            <img src="img/pulsometr.png" alt="pulsometr" class="catalog-item__img">
+                            <div class="catalog-item__subtitle">
+                                Пульсометр Polar FT1
+                            </div>
+                            <div class="catalog-item__descr">
+                                Для перших кроків у тренуваннях, заснованих на серцевому ритмі
+                            </div>
+                            <a href="#" class="catalog-item__link">Детальніше</a>
+                        </div>
+                        <div class="catalog-item__list">
+                            <ul>
+                                <li>Ви почуєте звукове сповіщення про потрібний пульс під час тренування;</li>
+                                <li>Ви побачите інформативний графічний індикатор цільових тренувальних зон пульсу;</li>
+                                <li>Також Ви побачите інформацію про витрати калорій за тренування;</li>
+                                <li>Ви зможете переглянути дані з 10 тренувань.</li>
+                            </ul>
+        
+                            <a href="#" class="catalog-item__back">назад</a>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="catalog-item__footer">
+                        <div class="catalog-item__prices">
+                            <div class="catalog-item__old-price">
+                                4 750 грн.
+                            </div>
+                            <div class="catalog-item__price">
+                                4 400 грн.
+                            </div>
+                        </div>
+                        <button class="button button_mini">Купити</button>
+                    </div>
+                </div>
+            </div>
+            <div class="catalog__content">
+                <div class="catalog-item">
+                    <div class="catalog-item__wrapper">
+                        <div class="catalog-item__content catalog-item__content_active">
+                            <img src="img/pulsometr.png" alt="pulsometr" class="catalog-item__img">
+                            <div class="catalog-item__subtitle">
+                                Пульсометр Polar FT1
+                            </div>
+                            <div class="catalog-item__descr">
+                                Для перших кроків у тренуваннях, заснованих на серцевому ритмі
+                            </div>
+                            <a href="#" class="catalog-item__link">Детальніше</a>
+                        </div>
+                        <div class="catalog-item__list">
+                            <ul>
+                                <li>Ви почуєте звукове сповіщення про потрібний пульс під час тренування;</li>
+                                <li>Ви побачите інформативний графічний індикатор цільових тренувальних зон пульсу;</li>
+                                <li>Також Ви побачите інформацію про витрати калорій за тренування;</li>
+                                <li>Ви зможете переглянути дані з 10 тренувань.</li>
+                            </ul>
+        
+                            <a href="#" class="catalog-item__back">назад</a>
+                        </div>
                     </div>
                     <hr>
                     <div class="catalog-item__footer">
@@ -455,10 +474,10 @@
 
     <section class="reviews">
         <div class="container">
-            <div class="title">Відгуки клієнтів</div>
+            <h2 class="title">Відгуки клієнтів</h2>
             <div class="reviews__users">
-                <div class="reviews__user">
-                    <img src="img/feed_1.png" alt="user1" class="reviews__img"></img>
+                <div class="reviews__user animate__animated animate__fadeInUp wow">
+                    <img src="img/feed_1.png" alt="user1" class="reviews__img">
                     <div class="reviews__text">
                         <div class="reviews__subtitle">
                             Ірина Іванченко
@@ -477,8 +496,8 @@
                     </div>
                 </div>
                 <div class="reviews__line-decoration"></div>
-                <div class="reviews__user">
-                    <img src="img/feed_2.png" alt="user2" class="reviews__img"></img>
+                <div class="reviews__user animate__animated animate__fadeInUp wow">
+                    <img src="img/feed_2.png" alt="user2" class="reviews__img">
                     <div class="reviews__text">
                         <div class="reviews__subtitle">
                             Іван Хмельницький
@@ -495,8 +514,8 @@
                     </div>
                 </div>
                 <div class="reviews__line-decoration"></div>
-                <div class="reviews__user">
-                    <img src="img/feed_3.png" alt="user3" class="reviews__img"></img>
+                <div class="reviews__user animate__animated animate__fadeInUp wow">
+                    <img src="img/feed_3.png" alt="user3" class="reviews__img">
                     <div class="reviews__text">
                         <div class="reviews__subtitle">
                             Юлія Пирняк
@@ -518,7 +537,7 @@
     </section>
 
     <footer class="footer">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2605.8688285424278!2d28.45797505263977!3d49.222014687928855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472d5b830c091c53%3A0x374dcb6033aab2ba!2z0LLRg9C70LjRhtGPINCa0L3Rj9C30ZbQsiDQmtC-0YDRltCw0YLQvtCy0LjRh9GW0LIsIDE1NSwg0JLRltC90L3QuNGG0Y8sINCS0ZbQvdC90LjRhtGM0LrQsCDQvtCx0LvQsNGB0YLRjCwgMjEwMDA!5e0!3m2!1suk!2sua!4v1691593153235!5m2!1suk!2sua" width="100%" height="630" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2605.8688285424278!2d28.45797505263977!3d49.222014687928855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472d5b830c091c53%3A0x374dcb6033aab2ba!2z0LLRg9C70LjRhtGPINCa0L3Rj9C30ZbQsiDQmtC-0YDRltCw0YLQvtCy0LjRh9GW0LIsIDE1NSwg0JLRltC90L3QuNGG0Y8sINCS0ZbQvdC90LjRhtGM0LrQsCDQvtCx0LvQsNGB0YLRjCwgMjEwMDA!5e0!3m2!1suk!2sua!4v1691593153235!5m2!1suk!2sua" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <div class="footer__info">
             <address class="footer__addr">Вінниця, Князів Коріантовичів, 155</address>
             <a href="tel:0699228974" class="footer__phone">(069) 922-89-74</a>
@@ -568,9 +587,16 @@
             <div class="modal__subtitle">Дякуємо за вашу заявку!</div>
             <div class="modal__descr"> Наш менеджер зв'яжеться з вами найближчим часом!</div>
         </div>
+        <div class="modal modal_mini" id="error">
+            <div class="modal__close">&times;</div>
+            <div class="modal__subtitle">Щось пішло не так...</div>
+        </div>
     </div>
-
+    
+    <a href="#up" class="pageup"><img src="icons/up.svg" alt="up"></a>
+    
     <script src="https://unpkg.com/imask"></script>
+    <script src="js/wow.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

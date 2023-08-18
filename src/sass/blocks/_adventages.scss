@@ -13,6 +13,13 @@
         flex-direction: column;
         align-items: center;
     }
+    &_icon{
+        &_animation{
+            &:hover{
+                animation: heartbeat 1.5s ease infinite;
+            }
+        }
+    }
     &__subtitle{
         margin-top: 38px;
         color: $text-color;
